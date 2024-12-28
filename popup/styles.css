@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 20px;
+  margin: 0;
+  width: 300px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+#login-section,
+#send-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+#success-message {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+h3 {
+  font-size: 12px;
+  text-align: center;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
