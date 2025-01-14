@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function autenticarUsuario(email, senha) {
-  return fetch('https://localhost:8000/api/v1/Auth/login', {
+    return fetch('https://easyrecruter/v1/autenticar', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

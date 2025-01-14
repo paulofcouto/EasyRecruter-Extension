@@ -70,7 +70,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                             };
 							
 					
-                            fetch('https://localhost:8000/api/v1/CandidatoExterno/SalvarDados', {
+                            fetch('https://easyrecruter/v1/CandidatoExterno/SalvarDados', {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json',
