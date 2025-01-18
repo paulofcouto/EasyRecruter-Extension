@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const successMessage = document.getElementById('success-message');
     const loadingMessage = document.getElementById('loading-message');
 
-    // Verifica se o token já está armazenado ao carregar o popup
     chrome.storage.local.get(['authToken'], (result) => {
         const token = result.authToken;
         if (token) {

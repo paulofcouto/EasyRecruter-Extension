@@ -4,10 +4,10 @@ async function capturarPerfilCompleto() {
   perfil.URL = window.location.href;
 
   const nomeElement = document.querySelector('.v-align-middle.break-words');
-  perfil.nome = nomeElement ? nomeElement.innerText.trim() : '';//'Nome não encontrado';
+  perfil.nome = nomeElement ? nomeElement.innerText.trim() : '';
 
   const cargoElemento = document.querySelector('.text-body-medium.break-words');
-  perfil.descricaoProfissional = cargoElemento ? cargoElemento.innerText.trim() : '';//'Descrição profissional não encontrado';
+  perfil.descricaoProfissional = cargoElemento ? cargoElemento.innerText.trim() : '';
 
   perfil.sobre = capturarTextoSobre();
 
@@ -60,7 +60,7 @@ function capturarExperiencias() {
 
           if (hasMultipleCargos) {
             const empresaElement = li.querySelector('.display-flex.align-items-center.mr1.hoverable-link-text.t-bold span.visually-hidden');
-			experiencia.empresa = empresaElement ? empresaElement.innerText.trim() : '';//'Empresa não encontrada';
+			experiencia.empresa = empresaElement ? empresaElement.innerText.trim() : '';
 
 			const localElement = Array.from(li.querySelectorAll('.t-14.t-normal.t-black--light'))
 			  .map(span => {
@@ -74,7 +74,7 @@ function capturarExperiencias() {
 			  })
 			  .filter(span => span !== null)
 			  .pop();
-			experiencia.local = localElement ? localElement.innerText.trim() : '';//'Local não encontrado';
+			experiencia.local = localElement ? localElement.innerText.trim() : '';
 
 			experiencia.cargos = [];
 
@@ -86,13 +86,13 @@ function capturarExperiencias() {
 			  const cargo = {};
 
 			  const tituloElement = subLi.querySelector('.display-flex.align-items-center.mr1.hoverable-link-text.t-bold span[aria-hidden="true"]');
-			  cargo.titulo = tituloElement ? tituloElement.innerText.trim() : '';//'Cargo não encontrado';
+			  cargo.titulo = tituloElement ? tituloElement.innerText.trim() : '';
 
 			  const periodoElement = subLi.querySelector('.t-14.t-normal.t-black--light span.visually-hidden');
-			  cargo.periodo = periodoElement ? periodoElement.innerText.trim() : '';//'Período não encontrado';
+			  cargo.periodo = periodoElement ? periodoElement.innerText.trim() : '';
 
 			  const descricaoElement = subLi.querySelector('.full-width.t-14.t-normal.t-black.display-flex.align-items-center span.visually-hidden');
-			  cargo.descricao = descricaoElement ? descricaoElement.innerText.trim() : '';//'Descrição não encontrada';
+			  cargo.descricao = descricaoElement ? descricaoElement.innerText.trim() : '';
 
 			  if (cargo.titulo && cargo.periodo && cargo.descricao) {
 			    experiencia.cargos.push(cargo);
@@ -180,7 +180,7 @@ async function capturarFoto() {
 
     return new Promise((resolve) => {
         reader.onloadend = () => resolve(reader.result || '');
-        reader.readAsDataURL(blob); // Converte para Base64
+        reader.readAsDataURL(blob);
     });
 }
 

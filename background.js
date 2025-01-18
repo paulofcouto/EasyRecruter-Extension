@@ -42,7 +42,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                                 return;
                             }
 
-                            // Verifica se os dados foram recebidos corretamente
                             if (!response || !response.dadosCapturados) {
                                 console.error('Nenhum dado capturado. Verifique o script de conteúdo.');
                                 sendResponse({

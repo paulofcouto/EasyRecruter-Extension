@@ -22,8 +22,8 @@ input {
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%; /* Garante que todos os inputs tenham a mesma largura */
-    max-width: 280px; /* Define um limite máximo */
+    width: 100%;
+    max-width: 280px;
     box-sizing: border-box;
 }
 
@@ -67,14 +67,14 @@ a {
 #password-wrapper {
     display: flex;
     align-items: center;
-    width: 100%; /* Garante que o wrapper ocupe o mesmo espaço do input */
-    max-width: 280px; /* Define um limite máximo */
-    gap: 10px; /* Espaçamento entre o campo e o botão */
+    width: 100%; 
+    max-width: 280px;
+    gap: 10px;
     box-sizing: border-box;
 }
 
 #password-wrapper input {
-    flex: 1; /* Garante que o input ocupe todo o espaço disponível */
+    flex: 1; 
 }
 
 #password-wrapper button {
