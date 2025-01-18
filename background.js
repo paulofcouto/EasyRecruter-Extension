@@ -37,6 +37,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                         chrome.tabs.sendMessage(currentTab.id, {
                             action: 'captureData'
                         }, (response) => {
+                            if (response && response.status === 'aguarde') {
+                                sendResponse({ status: 'carregando' }); 
+                                return;
+                            }
+
                             // Verifica se os dados foram recebidos corretamente
                             if (!response || !response.dadosCapturados) {
                                 console.error('Nenhum dado capturado. Verifique o script de conteúdo.');
@@ -70,7 +75,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
                             };
 							
 					
-                            fetch('https://easyrecruter.com.br/v1/CandidatoExterno/SalvarDados', {
+                            fetch('https://api.easyrecruter.com.br/v1/CandidatoExterno/SalvarDados', {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json',

@@ -10,13 +10,19 @@
 <body>
   <div id="login-section">
     <input type="email" id="email" placeholder="Email">
-    <input type="password" id="senha" placeholder="Senha">
+    <div id="password-wrapper">
+      <input type="password" id="senha" placeholder="Senha">
+      <button type="button" id="toggle-visibility">
+        <img id="toggle-icon" src="../images/eye.svg" alt="Exibir senha">
+      </button>
+    </div>
     <button id="login">Login</button>
   </div>
 
   <div id="send-section" style="display: none;">
     <button id="send" disabled>Enviar</button>
     <p id="success-message" style="display: none; color: green;">URL salva com sucesso!</p>
+    <p id="loading-message" style="display: none; color: red;">Aguarde a página ser carregada!</p>
   </div>
 
   <h3>

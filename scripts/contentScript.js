@@ -185,7 +185,11 @@ async function capturarFoto() {
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.action === 'captureData') {
+    if (document.readyState != 'complete') {
+        sendResponse({ status: 'aguarde' });
+        return true;
+    }
+    else if (message.action === 'captureData') {
         capturarPerfilCompleto().then((perfil) => {
             sendResponse({ dadosCapturados: perfil });
         }).catch((err) => {
